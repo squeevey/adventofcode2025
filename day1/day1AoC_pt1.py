@@ -1,3 +1,10 @@
+from pathlib import Path
+
+# relative reading
+dir_path = Path(__file__).parent
+print(dir_path)
+file_path = dir_path / 'input.txt'
+
 currentIndex = 50 #this is the current dial counter
 currentLine = '' #this is the fullstring of the current line
 currentCount = 0
@@ -6,7 +13,7 @@ def main():
     global fileHandle
     leftOrRight = None
     dialValue = None
-    with open('input.txt','r') as fileHandle:
+    with file_path.open('r') as fileHandle:
         for currentLine in fileHandle:
             leftOrRight = currentLine[0]
             dialValue = int(currentLine[1:])

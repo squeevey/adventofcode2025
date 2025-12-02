@@ -2,3 +2,6 @@
 day1/.DS_Store
 day1/input2.txt
 day1/input3.txt
+config
+.vscode/settings.json
+.gitignore
